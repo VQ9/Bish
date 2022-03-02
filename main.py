@@ -5,7 +5,7 @@ import asynctkinter as at
 class Main:
 
     def __init__(self):
-        print("hello")
+        print("hellao")
 
 
 Main()
