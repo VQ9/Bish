@@ -7,6 +7,9 @@ import bluetooth
 import time
 
 
+# hi
+
+
 class Main:
 
     def __init__(self):
