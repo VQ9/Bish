@@ -1,10 +1,6 @@
 import RPi.GPIO as GPIO
 
 
-def clean():
-    GPIO.cleanup()
-
-
 class Motor:
     def __init__(self, in1, in2, en):
         self.en = en
@@ -20,6 +16,9 @@ class Motor:
 
         self.p.start(100)
         self.p.ChangeDutCycle(75)
+
+    def clean(self):
+        GPIO.cleanup()
 
     def forward(self):
         GPIO.output(self.in1, GPIO.HIGH)

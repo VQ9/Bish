@@ -5,7 +5,7 @@ import motor
 print("Startup Start")
 
 print("Starting motors")
-motor1 = motor
+motor1 = motor.Motor(24, 23, 25)
 motor2 = motor.Motor(22, 27, 17)
 
 print("Starting bluetooth")
