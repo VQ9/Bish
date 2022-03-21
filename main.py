@@ -5,6 +5,7 @@ import motor
 print("Startup Start")
 
 print("Starting motors")
+# Creating 2 motor classes for the two different motors on the L298N chip
 motor1 = motor.Motor(24, 23, 25)
 motor2 = motor.Motor(22, 27, 17)
 
@@ -18,6 +19,7 @@ def control(pos):
     x = pos
     if x.middle:
         print("stop")
+        # I could probably recreate the steering as a separate class
         motor1.stop()
         motor2.stop()
     elif x.top:
@@ -44,4 +46,5 @@ bd.when_moved = control
 
 pause()
 
+# Cleanup just in case program fails
 motor1.clean()

@@ -7,6 +7,7 @@ class Motor:
         self.in1 = in1
         self.in2 = in2
 
+        # GPIO setup setting the PWM and the GPIO configuration
         GPIO.setmode(GPIO.BCM)
         GPIO.setwarnings(True)
         GPIO.setup(in1, GPIO.OUT)
@@ -17,6 +18,7 @@ class Motor:
         self.p.start(100)
         self.p.ChangeDutCycle(75)
 
+    # This could be static, but it isn't
     def clean(self):
         GPIO.cleanup()
 
